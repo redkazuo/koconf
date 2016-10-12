@@ -1,0 +1,5 @@
+*.sw[a-z]
+*.svn
+Session.vim
+.vimrc
+tags

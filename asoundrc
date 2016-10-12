@@ -1,0 +1,57 @@
+# aplay -l
+
+#pcm.!default {
+#    type hw
+# pc
+#    card 1
+#    device 0
+# hdmi
+#    card 0
+#    device 3
+#}
+#ctl.!default {
+#    type hw
+#    card 1
+#}
+
+# this configures simultaneous pc and hdmi sound
+
+pcm.!pc {
+    type hw
+    card 1
+    device 0
+}
+
+pcm.!hdmi {
+    type hw
+    card 0
+    device 3
+}
+
+pcm.!default {
+    type plug
+    slave {
+        pcm "multi"
+    }
+    ttable.0.0 1.0
+    ttable.1.1 1.0
+    ttable.0.2 1.0
+    ttable.1.3 1.0
+}
+
+pcm.multi {
+    type multi
+    slaves.a.pcm "hw:0,3"
+    slaves.a.channels 2
+    slaves.b.pcm "hw:1,0"
+    slaves.b.channels 2
+    bindings.0.slave a
+    bindings.0.channel 0
+    bindings.1.slave a
+    bindings.1.channel 1
+    bindings.2.slave b
+    bindings.2.channel 0
+    bindings.3.slave b
+    bindings.3.channel 1
+}
+

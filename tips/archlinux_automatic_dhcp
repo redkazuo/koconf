@@ -1,0 +1,8 @@
+pacman -S ifplugd
+cd /etc/network.d
+ln -s examples/ethernet-dhcp .
+systemctl enable net-auto-wired.service
+
+it may be necessary to create a file /etc/modules-load.d/blabla.conf:
+sky2
+(the module name may be found with lspci -k)

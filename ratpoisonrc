@@ -1,0 +1,53 @@
+startup_message off
+escape C-v
+
+set font Monospace
+set border 0
+
+bind C-s hsplit 13/30
+
+bind C-c exec urxvt +sb
+bind c exec urxvt +sb -e screen -U -RR -D
+bind M-c exec XMODIFIERS=@im=SCIM GTK_IM_MODULE=scim gnome-terminal --hide-menubar
+
+#bind C-c exec urxvt -fn "xft:DejaVu Sans Mono:pixelsize=14" +sb
+#bind c exec urxvt +sb -fn "xft:Fixed:pixelsize=12" -e screen -U -RR -D
+
+#bind C-c exec XMODIFIERS=@im=SCIM GTK_IM_MODULE=scim LANG=en_US.UTF-8 gnome-terminal --hide-menubar
+#bind c exec XMODIFIERS=@im=SCIM GTK_IM_MODULE=scim gnome-terminal --hide-menubar -x screen -U -RR -D
+
+bind f exec google-chrome-stable
+bind q exec /opt/wicd/gui.py
+bind C-h focusleft
+bind C-j focusdown
+bind C-k focusup
+bind C-l focusright
+bind h exchangeleft
+bind j exchangedown
+bind k exchangeup
+bind l exchangeright
+bind M-h exec `ratpoison -c focusleft` && `ratpoison -c remove`
+bind M-j exec `ratpoison -c focusdown` && `ratpoison -c remove` && `ratpoison -c focuslast`
+bind M-k exec `ratpoison -c focusup` && `ratpoison -c remove`
+bind M-l exec `ratpoison -c focusright` && `ratpoison -c remove` && `ratpoison -c focuslast`
+bind bracketleft delete
+bind braceleft kill
+bind bracketright redisplay
+bind C-o only
+bind o only
+bind n focus
+bind p focuslast
+
+definekey top XF86AudioLowerVolume exec amixer -- sset Master unmute 6dB-
+definekey top XF86AudioRaiseVolume exec amixer -- sset Master unmute 4dB+
+definekey top XF86AudioMute exec amixer -- sset Master toggle
+
+bind F9 exec setxkbmap us
+bind F10 exec setxkbmap -model abnt2 -layout br
+bind F12 ratclick 2
+bind a exec ratpoison -c "echo `/etc/acpi/kazuo-eeepc-cpubattery-status.sh`"
+
+exec rpws init 4 -k
+exec xsetroot -solid lightblue
+exec xsetroot -cursor_name left_ptr
+

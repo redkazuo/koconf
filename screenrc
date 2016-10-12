@@ -1,0 +1,15 @@
+startup_message off
+
+defutf8 on
+hardstatus off
+
+bind j focus down
+bind k focus up
+bind ^j focus down
+bind ^k focus up
+bind l focus 
+bind ^l focus
+bind { kill
+bind o only
+bind \' windowlist -b
+

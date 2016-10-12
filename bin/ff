@@ -1,0 +1,12 @@
+#! /bin/bash
+
+if [ 0 -eq $# ]; then
+    feh -x --draw-filename -B black -F *
+
+elif [ 1 -eq $# ] &&  [ -d "$1" ]; then
+    find "$1" -type f -print0 | xargs -0 feh -x --draw-filename -B black -F
+
+else
+    feh -x --draw-filename -B black -F "$@"
+fi
+

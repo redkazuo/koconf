@@ -1,0 +1,23 @@
+[user]
+	name = Guilherme Kazuo M. Ogawa
+	email = redkazuo@gmail.com
+    signingKey = Guilherme Kazuo Marchi Ogawa <redkazuo@gmail.com>
+[core]
+	excludesfile = /home/kazuo/.gitignore
+	pager = less -RS
+	ignorecase = true
+[merge]
+	tool = gvimdiff
+[alias]
+	st = status
+	co = checkout
+	ci = commit
+	dica = diff --cached --color
+	di = diff --color
+	pick = cherry-pick
+	br = branch
+	shoco = show --color
+	rebcon = rebase --continue
+	fpo = format-patch --stdout
+[push]
+	default = simple

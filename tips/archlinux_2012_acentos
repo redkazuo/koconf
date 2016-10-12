@@ -1,0 +1,5 @@
+add this to /etc/locale.conf
+LANG=en_US.utf8
+and do
+pacman -S systemd-sysvcompat
+
