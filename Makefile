@@ -1,5 +1,5 @@
 BIN = ff
-FILES = bash_aliases asoundrc bashrc gitconfig gitignore gvimrc lesskey ratpoisonrc screenrc vimrc inputrc rtorrent.rc
+FILES = bash_aliases asoundrc bashrc gitconfig gitignore gvimrc lesskey ratpoisonrc screenrc vimrc inputrc rtorrent.rc i3status.conf
 install:
 	for f in ${FILES}; do cp $$f ~/.$$f; done
 	cp -Tfr vim ~/.vim
