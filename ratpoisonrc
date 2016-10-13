@@ -38,14 +38,14 @@ bind o only
 bind n focus
 bind p focuslast
 
-definekey top XF86AudioLowerVolume exec amixer -- sset Master unmute 6dB-
-definekey top XF86AudioRaiseVolume exec amixer -- sset Master unmute 4dB+
-definekey top XF86AudioMute exec amixer -- sset Master toggle
+definekey top XF86AudioLowerVolume exec amixer -c 1 -- sset Master unmute 6dB-
+definekey top XF86AudioRaiseVolume exec amixer -c 1 -- sset Master unmute 4dB+
+definekey top XF86AudioMute exec amixer -c 1 -- sset Master toggle
 
 bind F9 exec setxkbmap us
 bind F10 exec setxkbmap -model abnt2 -layout br
 bind F12 ratclick 2
-bind a exec ratpoison -c "echo `/etc/acpi/kazuo-eeepc-cpubattery-status.sh`"
+bind a exec ratpoison -c "echo `acpi`"
 
 exec rpws init 4 -k
 exec xsetroot -solid lightblue

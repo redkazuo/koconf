@@ -31,8 +31,8 @@ export CFLAGS="-I/home/kazuo/.local/include -L/home/kazuo/.local/lib $CFLAGS"
 export PKG_CONFIG_PATH=/home/kazuo/.local/lib/pkgconfig
 export LD_LIBRARY_PATH=/home/kazuo/.local/lib
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+#export PATH="$HOME/.rbenv/bin:$PATH"
+#eval "$(rbenv init -)"
 
 export VISUAL=vim
 export EDITOR=vim
