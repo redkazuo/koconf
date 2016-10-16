@@ -9,7 +9,7 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod1
+set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -122,7 +122,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exit
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -160,8 +160,8 @@ bindsym XF86AudioLowerVolume exec amixer -c 1 -- sset Master unmute 6dB-
 bindsym XF86AudioRaiseVolume exec amixer -c 1 -- sset Master unmute 4dB+
 bindsym XF86AudioMute exec amixer -c 1 -- sset Master toggle
 
-bindsym $mod+XF86AudioLowerVolume exec xbacklight -5
-bindsym $mod+XF86AudioRaiseVolume exec xbacklight +5
+bindsym $mod+XF86AudioLowerVolume exec light -S 10
+bindsym $mod+XF86AudioRaiseVolume exec light -S 50
 
 bindsym $mod+F9 exec setxkbmap us
 bindsym $mod+F10 exec setxkbmap -model abnt2 -layout br
