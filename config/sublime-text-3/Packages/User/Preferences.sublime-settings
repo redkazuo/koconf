@@ -1,8 +1,19 @@
 {
-	"color_scheme": "Packages/Color Scheme - Default/IDLE.tmTheme",
+	"color_scheme": "Packages/Color Scheme - Default/Mac Classic.tmTheme",
 	"ignored_packages":
 	[
+		"Vintage"
 	],
 	"vintage_ctrl_keys": true,
-	"vintage_start_in_command_mode": true
+	"vintage_start_in_command_mode": true,
+	"vintageous_autoindent": true,
+	"vintageous_enable_cmdline_mode": true,
+	"vintageous_hlsearch": true,
+	"vintageous_ignorecase": true,
+	"vintageous_incsearch": true,
+	"vintageous_log_level": "error",
+	"vintageous_magic": true,
+	"vintageous_reset_mode_when_switching_tabs": true,
+	"vintageous_use_ctrl_keys": true,
+	"vintageous_use_sys_clipboard": false
 }

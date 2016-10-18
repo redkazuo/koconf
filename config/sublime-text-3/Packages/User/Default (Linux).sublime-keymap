@@ -1,11 +1,3 @@
 [
-	{ "keys": ["ctrl+c"], "command": "exit_visual_mode",
-		"context":
-		[
-			{ "key": "setting.command_mode"},
-			{ "key": "num_selections", "operand": 1},
-			{ "key": "selection_empty", "operator": "equal", "operand": false, "match_all": false }
-		]
-	},
 ]
 

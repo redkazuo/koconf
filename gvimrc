@@ -1,6 +1,6 @@
 colo mine
 
-set guifont=Monospace\ 12
+set guifont=Monospace\ 11
 "set guifont=Fixed\ 10
 "set guifont=Liberation\ Mono\ 15
 

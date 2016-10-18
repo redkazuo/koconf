@@ -32,6 +32,7 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec urxvt +sb -e screen -U -RR -D
 bindsym $mod+Shift+Return exec urxvt +sb
+bindsym $mod+c exec google-chrome-stable
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -160,9 +161,12 @@ bindsym XF86AudioLowerVolume exec amixer -c 1 -- sset Master unmute 6dB-
 bindsym XF86AudioRaiseVolume exec amixer -c 1 -- sset Master unmute 4dB+
 bindsym XF86AudioMute exec amixer -c 1 -- sset Master toggle
 
-bindsym $mod+XF86AudioLowerVolume exec light -S 10
-bindsym $mod+XF86AudioRaiseVolume exec light -S 50
+bindsym $mod+XF86AudioLowerVolume exec light -U 5
+bindsym $mod+XF86AudioRaiseVolume exec light -A 5
 
 bindsym $mod+F9 exec setxkbmap us
 bindsym $mod+F10 exec setxkbmap -model abnt2 -layout br
+
+bindsym $mod+F11 exec sct 5000
+bindsym $mod+F12 exec sct 6500
 
